@@ -1,0 +1,37 @@
+
+putty.exe - to start virtual machine
+puttygen - converting from pem file to ppk
+           putty will accept ppk file
+
+EC2 instance - select region
+Mumbai - 5
+
+
+name value - oraclename(instance name)
+
+configure security group - HTTP
+review and launch
+
+launch
+
+create a new key pair - oraclekeypairname - download keypairname
+
+launch instance
+
+view instances
+
+select instance  - get ipaddress 35.163.218.82
+run puttygen
+
+load - pem file
+save private key
+
+create ppk file
+
+
+start putty
+host name(or ip address) - ec2-user@35.163.218.82
+
+saved session - ec2-user@35.163.218.82 -save
+
+SSH -Auth -Private key file for authentication -select oracleppk file
