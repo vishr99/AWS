@@ -6,7 +6,8 @@ to install gradle on ec2
 
 Step 1: Step 1. Download and Install Gradle.
 -------------------------------------------
-cd opt
+
+cd /opt
 
 wget https://services.gradle.org/distributions/gradle-3.1-bin.zip
  unzip gradle-3.1-bin.zip
@@ -19,11 +20,11 @@ Step 2. Set Gradle Environment Value.
 export GRADLE_HOME=/opt/gradle
 export PATH=$PATH:$GRADLE_HOME/bin
 
-esc :wq 
+esc :wq + enter
 
 cd /home
 cd ec2-user/
- source /etc/profile.d/gradle-env.sh
+source /etc/profile.d/gradle-env.sh
 
 
 
