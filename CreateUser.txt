@@ -1,0 +1,224 @@
+https://futurenova2016.signin.aws.amazon.com/console
+
+add user
+
+AWS Management Console access
+
+custom password - 
+
+uncheck - User must create a new password at next sign-in
+
+Add user to group - unexpected error -?
+
+create user
+
+create a new group - oraclegroup
+
+attach policy - EC2FullAccess
+
+create group
+
+
+select oraclegroup - group actions
+
+add users to group
+
+user 40
+-----------------------------
+
+putty.exe - to start virtual machine
+puttygen - converting from pem file to ppk
+           putty will accept ppk file
+
+EC2 instance - select region
+Mumbai - 5
+
+
+name value - oraclename(instance name)
+
+configure security group - HTTP
+review and launch
+
+launch
+
+create a new key pair - oraclekeypairname - download keypairname
+
+launch instance
+
+view instances
+
+select instance  - get ipaddress 35.163.218.82
+run puttygen
+
+load - pem file
+save private key
+
+create ppk file
+
+
+start putty
+host name(or ip address) - ec2-user@35.163.218.82
+
+saved session - ec2-user@35.163.218.82 -save
+
+SSH -Auth -Private key file for authentication -select oracleppk file
+
+sudo su
+
+
+
+Git installation :
+------------------
+
+yum install git -y
+
+java installation :
+-------------------
+yum install java-1.7.0-openjdk-devel -y
+yum install java-1.8.0-openjdk-devel -y
+
+
+
+java program on ec2 instance
+----------------------------
+
+mkdir test
+cd test
+nano Demo.java
+
+ctrl+x and save - Yes then enter
+
+
+S3-5 TB
+-------
+static web site
+versioning 
+
+create Bucket - orabucket -in small letters
+
+selet orabucket
+
+upload your application - home.html
+
+Properties - static website hosting -enable website hosting
+Index document - home.html - save
+select application - actions - make public
+
+endpoint - orabucket.s3-website-us-west-2.amazonaws.com
+
+
+Dynamodb and java demo
+----------------------
+
+to install gradle on ec2
+------------------------
+cd /opt
+
+wget https://services.gradle.org/distributions/gradle-3.1-bin.zip
+ unzip gradle-3.1-bin.zip
+ln -s gradle-3.1 gradle
+
+ vim /etc/profile.d/gradle-env.sh
+
+export GRADLE_HOME=/opt/gradle
+export PATH=$PATH:$GRADLE_HOME/bin
+
+esc :wq
+
+cd /home
+cd ec2-user/
+ source /etc/profile.d/gradle-env.sh
+
+
+
+git init 
+
+git pull gradleproject
+
+aws configure
+
+IAM 
+click on user - sanjay
+security credentials - create access key - download csv file.
+
+copy key value
+
+gradle build
+gradle run
+
+service - dynamodb - default region -North Viginia
+Tables - items - to view the records
+
+
+Elastic BeanStalk
+-----------------
+task automation..
+
+
+services
+compute
+Elastic Beanstalk
+
+create new application
+
+application name - 
+web server environment
+
+platform - tomcat
+ configure more option
+ security - modify
+ 
+ key pair - oraclekeypairname
+ I am instance profile - aws-elasticbeanstalk-ec2-role
+
+ create environment
+
+ after successful installation
+ 
+ click on link to see home page 
+
+
+
+SNS
+---
+services
+mobile
+create topic
+topic name
+display name
+
+copy arn : e.g. => arn:aws:sns:sa-east-1:544864730040:topic123
+create subscription
+change protocol from http to email
+
+endpoint - sanjay.degaonkar@capgemini.com
+
+
+confirm subscription
+
+refresh
+
+publish to topic
+
+
+
+Text messaging(SMS)
+Send a text messages(SMS)
+..
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
